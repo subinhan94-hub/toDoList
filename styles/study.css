@@ -1,0 +1,38 @@
+#wrap {
+    width:402px;
+    height:874px;
+    background-color: bisque;
+    padding: 45px 15px;
+}
+#wrap > header {
+    border-bottom: 1px solid #000;
+    margin-bottom: 40px;
+}
+/* ==============================================header-1행 */
+#wrap > header > .top {}
+#wrap > header > .top > h1 {}
+#wrap > header > .top > h1 > a {
+    font-size: 1.125em;
+    font-weight: 700;
+}
+#wrap > header > .top > .search_menu_btn {}
+#wrap > header > .top > .search_menu_btn > .search_btn {
+    margin: 8px;
+}
+#wrap > header > .top > .search_menu_btn > .search_btn > img {}
+#wrap > header > .top > .search_menu_btn > .menu_btn {}
+#wrap > header > .top > .search_menu_btn > .menu_btn > img {}
+/* ==============================================header-2행 */
+#wrap > header > nav {
+    font-size: 1.125em;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+#wrap > header > nav > .all {
+    margin-right: 12px;
+}
+#wrap > header > nav > .all > .num {color: #aaa;}
+#wrap > header > nav > .today {color: #aaa;}
+#wrap > header > nav > .today > .num {color: #aaa;}
+#wrap > header > nav > .active {color: #000; font-weight: 700;}
+#wrap > header > nav > .active > .num {color: #000; font-weight: 700;}
