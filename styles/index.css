@@ -31,7 +31,11 @@
     border-bottom: 1px solid #000;
     margin-bottom: 40px;
 }
-#wrap > header > .top {}
+#wrap > header > .top {
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+}
 #wrap > header > .top > h1 {}
 #wrap > header > .top > h1 > a {/* 글자 꾸미기는 글자에 가까운 선택자에 작성 */
     font-size:1.125em;
@@ -66,3 +70,55 @@
 #wrap > header > nav > .active > .num {
     font-weight:700; color: #000;
 }
+/* ========================================================main */
+#wrap > main {}
+/* ========================================================main 1행 날짜~할일 목록 리스트 */
+#wrap > main > .to_do_list {
+    background-color: yellow;
+    display: flex;
+    flex-flow:column-reverse nowrap;
+    /* gap:10px;2개 이상의 자식 사이 바깥쪽 여백(간격) 적용(margin효과 동일) / flex없이 사용할 수 없다. */
+    /* 실제 웹&앱 서비스를 이용하는 사용자가 작성하는 내용은 항상 부모의 마지막 자식 위치로 삽입된다. 개발자가 `반전` 설정을 하지 않으면 무조건 아래로 쌓인다는 뜻. 내용이 많을수록 점점 보기 불편해지는 상황이 생기므로 축 반전을 통해 사용자가 작성한 마지막 `첫 글`이 되도록 프래그래밍을 작성해야한다. */
+}
+#wrap > main > .to_do_list > li {
+    display: flex;
+    /* display:flex 외에 나머지 속성은 순서 상관 없음. */
+    flex-flow: row nowrap; /* 메인축(수평) 줄바꿈(x) */
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding: 12px 0 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    gap:16px;
+}
+#wrap > main > .to_do_list > li * {
+letter-spacing:-0.02em;
+}
+
+#wrap > main > .to_do_list > li > .date {
+    font-weight: 600;
+    }
+#wrap > main > .to_do_list > li > .list {
+    
+}
+/* ==============================================================글쓰기 버튼 */
+#wrap > main > .write_popup_btn {}
+#wrap > main > .write_popup_btn > img {}
+/* ==============================================================글쓰기 버튼 클릭 시 실행화면 */
+#wrap > main > .write_popup {
+    background-color: white;
+    display: flex;
+    width: 336px; height: 219px;
+    padding: 20px;
+    flex-flow:column nowrap;
+    justify-content:space-between;
+}
+#wrap > main > .write_popup > .info {
+    font-family: 'Noto Sans KR';
+    font-size: 0.875em;
+    color: rgba(0,0,0,0.6);
+}
+#wrap > main > .write_popup > .write_btn {
+    width:42px;
+    align-self:flex-end;/* 자식한테만 개별로 적용하고 싶은 경우 */
+}
+#wrap > main > .write_popup > .write_btn > img {width:100%;}
